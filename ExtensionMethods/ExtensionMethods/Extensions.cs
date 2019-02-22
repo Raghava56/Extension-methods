@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ExtensionMethods
 {
-    public static class ExtensionMethod
+    public static class Extension
     {
         /// <summary>
         /// Parse Date Time.
@@ -15,7 +15,7 @@ namespace ExtensionMethods
         /// <param name="dateTime"></param>
         /// <param name="locale"></param>
         /// <returns></returns>
-        public static DateTime ParseDateTime(string dateTime, int locale)
+        public static DateTime ParseDateTime(this string dateTime, int locale)
         {
             var defaultDateTime = new DateTime();
             try
@@ -71,7 +71,7 @@ namespace ExtensionMethods
         /// </summary>
         /// <param name="value">The value.</param>
         /// <returns></returns>
-        public static bool ToBoolean(string value)
+        public static bool ToBoolean(this string value)
         {
             return value.ToBoolean();
         }
@@ -114,7 +114,7 @@ namespace ExtensionMethods
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static Guid ParseGuid(string value)
+        public static Guid ParseGuid(this string value)
         {
             Guid result;
             try
